@@ -1,0 +1,274 @@
+main .content {
+  padding-bottom: 35px;
+}
+main .content .tabs {
+  margin-bottom: 15px;
+}
+main .content .card {
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+}
+main .content .section {
+  display: none;
+}
+main .content .section.selected {
+  display: block;
+}
+main .content .plans-section .plans-top {
+  gap: 20px;
+  margin-bottom: 25px;
+}
+main .content .plans-section .plans-top .card {
+  padding: 25px 30px;
+}
+main .content .plans-section .plans-top .current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+main .content .plans-section .plans-top .current .title, main .content .plans-section .plans-top .current .sub {
+  width: 100%;
+}
+main .content .plans-section .plans-top .current .title {
+  margin-bottom: 30px;
+}
+main .content .plans-section .plans-top .current .title svg, main .content .plans-section .plans-top .current .title span {
+  vertical-align: middle;
+}
+main .content .plans-section .plans-top .current .title span {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 22px;
+}
+main .content .plans-section .plans-top .current .title svg {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+main .content .plans-section .plans-top .select .selector {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+main .content .plans-section .plans-top .select .selector .item {
+  text-align: center;
+}
+main .content .plans-section .plans-top .select .selector .item .title {
+  margin-bottom: 10px;
+}
+main .content .plans-section .plans-top .select .selector .item .title svg, main .content .plans-section .plans-top .select .selector .item .title span {
+  vertical-align: middle;
+}
+main .content .plans-section .plans-top .select .selector .item .title span {
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 22px;
+}
+main .content .plans-section .plans-top .select .selector .item .sub {
+  font-size: 20px;
+}
+main .content .plans-section .plans-top .select .selector-sub {
+  font-size: 20px;
+  text-align: center;
+}
+main .content .plans-section .plans-bottom {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .content .plans-section .plans-bottom .plan:not(:last-child) {
+  margin-right: 25px;
+}
+main .content .plans-section .plans-bottom .plan {
+  vertical-align: top;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  text-align: center;
+  padding: 25px 30px;
+  width: 33%;
+}
+main .content .plans-section .plans-bottom .plan .title svg {
+  width: 60px;
+  height: 60px;
+}
+main .content .plans-section .plans-bottom .plan .title .name {
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 20px;
+}
+main .content .plans-section .plans-bottom .plan .price {
+  margin: 25px 0;
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 20px;
+}
+main .content .plans-section .plans-bottom .plan ul {
+  text-align: left;
+  padding-left: 20px;
+}
+main .content .plans-section .plans-bottom .plan ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .plans-section .plans-bottom .plan button {
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  background-color: #4353ff;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  margin-top: 25px;
+}
+main .content .ad-section {
+  width: 100%;
+  padding-right: 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .content .ad-section .container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+main .content .ad-section .item {
+  position: relative;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  padding: 25px 30px 115px 30px;
+  width: 21%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .ad-section .item:hover {
+  color: #33324e;
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.3);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.3);
+}
+main .content .ad-section .item .head {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+main .content .ad-section .item img {
+  position: absolute;
+  bottom: 36px;
+  right: 36px;
+  width: 100px;
+  -webkit-transform: rotate(25deg);
+      -ms-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+@media screen and (max-width: 1440px) {
+  main .content .ad-section .item {
+    width: 37%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .content .plans-section .plans-top {
+    display: block;
+  }
+  main .content .plans-section .plans-top .current {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .content .plans-section .plans-top .select .selector {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px;
+  }
+  main .content .plans-section .plans-bottom {
+    display: block;
+  }
+  main .content .plans-section .plans-bottom .plan:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  main .content .plans-section .plans-bottom .plan {
+    width: 60%;
+  }
+  main .content .ad-section {
+    padding-right: 0;
+  }
+  main .content .ad-section .container {
+    gap: 15px 2%;
+  }
+  main .content .ad-section .container .item {
+    width: 49%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .content .plans-section .plans-top .card {
+    padding: 15px;
+  }
+  main .content .plans-section .plans-top .current .title {
+    margin-bottom: 20px;
+  }
+  main .content .plans-section .plans-top .current .title svg {
+    width: 40px;
+    height: 40px;
+  }
+  main .content .ad-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .content {
+    font-size: 16px;
+  }
+  main .content .plans-section .plans-top .current .title span {
+    font-size: 18px;
+  }
+  main .content .plans-section .plans-top .select .selector-sub {
+    font-size: 16px;
+  }
+  main .content .plans-section .plans-top .select .selector {
+    margin-bottom: 15px;
+  }
+  main .content .plans-section .plans-top .select .selector .item .sub {
+    font-size: 16px;
+  }
+  main .content .plans-section .plans-top .select .selector .item .title svg {
+    width: 30px;
+    height: 30px;
+  }
+  main .content .plans-section .plans-top .select .selector .item .title span {
+    font-size: 18px;
+  }
+  main .content .plans-section .plans-bottom .plan {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px;
+  }
+  main .content .plans-section .plans-bottom .plan .title svg {
+    width: 45px;
+    height: 45px;
+  }
+  main .content .plans-section .plans-bottom .plan .title .name {
+    font-size: 18px;
+  }
+  main .content .ad-section .container {
+    display: block;
+  }
+  main .content .ad-section .container .item {
+    width: 100%;
+  }
+  main .content .ad-section .container .item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}

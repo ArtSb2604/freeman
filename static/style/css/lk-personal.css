@@ -1,0 +1,281 @@
+main .content, main .sidebar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+}
+main .content .content-left {
+  width: 38%;
+}
+main .content .content-right {
+  width: 60%;
+}
+main .content .progress {
+  padding: 20px 15px 25px 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+main .content .progress .head {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+}
+main .content .progress .value {
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 30px;
+  margin: 15px 0;
+}
+main .content .progress .progress-bar {
+  margin-bottom: 10px;
+}
+main .content .progress .progress-bar .square {
+  display: inline-block;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  background-color: #7f88a6;
+}
+main .content .progress .progress-bar .square:not(:last-child) {
+  margin-right: 5px;
+}
+main .content .progress .progress-bar .square.active {
+  background-color: #4353ff;
+}
+main .content .progress, main .content .card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .content .card {
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  background-color: #fff;
+  padding: 25px 15px;
+  margin-bottom: 15px;
+}
+main .content .card .head {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main .content .card .head span, main .content .card .head button {
+  vertical-align: middle;
+}
+main .content .card .head button {
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+  margin-top: -3px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .card .head button:hover {
+  background-color: #4353ff;
+}
+main .content .card .head button:hover svg path {
+  stroke: #fff;
+}
+main .content .card .head button svg {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+main .content .card .head button svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .card .head button.hidden {
+  display: none;
+}
+main .content .card .buttons {
+  text-align: center;
+}
+main .content .card .buttons button:first-child {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+main .content .card .buttons button {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .card .buttons button:hover {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .card .buttons button.b-btn {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .personal-info .data .line:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .personal-info .data .line span.value {
+  float: right;
+}
+main .content .personal-info .data-edit {
+  display: none;
+}
+main .content .personal-info .data-edit .line span.title {
+  width: 118px;
+  display: inline-block;
+}
+main .content .personal-info .data-edit .line input {
+  font-size: 16px;
+  color: #33324e;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+main .content .settings .head {
+  padding: 8.3px;
+}
+main .content .settings form .form-section {
+  margin-bottom: 15px;
+}
+main .content .settings form .form-section .title {
+  font-family: Nunito-SemiBold, sans-serif;
+}
+main .content .settings form .form-section input {
+  font-size: 16px;
+  color: #33324e;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+main .content .settings form .input-wrap input {
+  margin-top: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .content .settings form .checkbox-wrap .line {
+  margin-top: 10px;
+}
+main .content .settings form .checkbox-wrap .line input, main .content .settings form .checkbox-wrap .line label {
+  cursor: pointer;
+}
+main .content .company-info .company-head .name {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+}
+main .content .company-info .company-head .logo {
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .content .company-info .company-head .logo, main .content .company-info .company-head .name {
+  vertical-align: middle;
+}
+main .content .company-info .data {
+  margin-top: 15px;
+}
+main .content .company-info .data .title {
+  font-family: Nunito-SemiBold, sans-serif;
+}
+main .content .company-info .data p {
+  margin: 10px 0;
+}
+main .content .company-info .data .line {
+  margin-top: 20px;
+}
+main .content .company-info .data .line span.title {
+  width: 100px;
+  display: inline-block;
+}
+main .content .company-info .data-edit {
+  display: none;
+}
+main .content .company-info .data-edit .form-section input, main .content .company-info .data-edit .form-section textarea {
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  color: #33324e;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .content .company-info .data-edit .form-section input[type=file] {
+  margin-top: 10px;
+}
+main .content .company-info .data-edit .form-section .title {
+  margin-bottom: 10px;
+}
+main .content .company-info .data-edit .form-section label {
+  font-family: Nunito-SemiBold, sans-serif;
+}
+main .content .company-info .data-edit .form-section textarea {
+  resize: none;
+}
+main .content .company-info .data-edit .form-section:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .category .buttons {
+  display: none;
+}
+main .content .category .form-section:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .category .form-section input {
+  width: 20px;
+  height: 20px;
+  margin: 1px 10px 4px 3px;
+}
+main .content .category .form-section input, main .content .category .form-section label {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1200px) {
+  main .content {
+    display: block;
+  }
+  main .content .content-left, main .content .content-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .content .progress {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main .content .progress .value {
+    font-size: 25px;
+  }
+  main .content .progress .progress-bar .square {
+    width: 20px;
+    height: 20px;
+  }
+  main .content .company-info .company-head .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 425px) {
+  main .container .content {
+    font-size: 16px;
+  }
+  main .container .content .card .head {
+    font-size: 16px;
+  }
+  main .container .content .card .buttons button {
+    width: 100%;
+  }
+}

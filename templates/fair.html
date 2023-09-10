@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+	<link rel="stylesheet" href="{% static "style/css/lk.css" %}">
+	<link rel="stylesheet" href="{% static "style/css/fair.css" %}">
+{% endblock %}
+{% block main %}
+		<h2>Объявления</h2>
+		<section>
+			<form action="/advertisement" method="POST">
+				<div class="row">
+					<div class="sort" id="sort">
+						<button type="button" class="btn-sort">
+							<span>Сортировать по...</span>
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 5.25C16.2029 5.25 16.3972 5.33222 16.5384 5.47789L20.5384 9.60289C20.8268 9.90025 20.8195 10.3751 20.5221 10.6634C20.2247 10.9518 19.7499 10.9445 19.4616 10.6471L16.75 7.8508L16.75 18C16.75 18.4142 16.4142 18.75 16 18.75C15.5858 18.75 15.25 18.4142 15.25 18L15.25 7.8508L12.5384 10.6471C12.2501 10.9445 11.7753 10.9518 11.4779 10.6634C11.1805 10.3751 11.1732 9.90025 11.4616 9.60289L15.4616 5.47789C15.6028 5.33222 15.7971 5.25 16 5.25ZM8 5.25C8.41421 5.25 8.75 5.58579 8.75 6L8.75 16.1492L11.4616 13.3529C11.7499 13.0555 12.2247 13.0482 12.5221 13.3366C12.8195 13.6249 12.8268 14.0997 12.5384 14.3971L8.53843 18.5221C8.39717 18.6678 8.20291 18.75 8 18.75C7.79709 18.75 7.60283 18.6678 7.46158 18.5221L3.46158 14.3971C3.17322 14.0997 3.18053 13.6249 3.47789 13.3366C3.77526 13.0482 4.25007 13.0555 4.53843 13.3529L7.25 16.1492L7.25 6C7.25 5.58579 7.58579 5.25 8 5.25Z" fill="#7B86FF"/></g></svg>
+						</button>
+						<div class="sort-options hidden" id="sort-options">
+							<ul>
+								<li>
+									<span>Дате публикации</span>
+									<button type="submit" class="active" value="">
+										<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 16L13 16" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M6 11H13" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M8 6L13 6" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M17 4L17 20L20 16" stroke="#33324e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+									</button>
+									<button type="submit" value="">
+										<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 8H13" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M6 13H13" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M8 18H13" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M17 20V4L20 8" stroke="#33324e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button type="reset" class="b-btn">
+						<span>Сбросить всё</span>
+					</button>
+					<a href="{% url "create_advertisement" %}" class="b-btn">Разместить объявление</a>
+					<div class="search">
+						<input type="search" placeholder="Поиск по названию">
+						<button type="submit" class="icon" value="">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+						</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="ad-search">
+						<div class="selects flex">
+							<select name="rank">
+								<option value="">Категория</option>
+								<option value="Категория1">Категория1</option>
+								<option value="Категория2">Категория2</option>
+								<option value="Категория3">Категория3</option>
+							</select>
+							<select name="city">
+								<option value="">Выбрать город</option>
+								<option value="Категория1">Москва</option>
+								<option value="Категория2">Санкт-Петербург</option>
+								<option value="Категория3">Ростов-на-Дону</option>
+							</select>
+							<select name="name">
+								<option value="">Наименование</option>
+							</select>
+						</div>
+						<div class="inputs flex">
+							<div class="input-area">
+								<div class="title">Количество</div>
+								<input type="number" placeholder="от">
+								<span>-</span>
+								<input type="number" placeholder="до">
+								<span>Штук</span>
+							</div>
+							<div class="input-area">
+								<div class="title">Сумма контракта</div>
+								<input type="number" placeholder="от">
+								<span>-</span>
+								<input type="number" placeholder="до">
+								<span>Рублей</span>
+							</div>
+							<div class="input-area checkbox-area">
+								<div class="check-area">
+									<input type="checkbox" id="check1">
+									<label for="check1">Только новые (за 24 часа)</label>
+								</div>
+								<div class="check-area">
+									<input type="checkbox" id="check2">
+									<label for="check2">Только активные</label>
+								</div>
+								<div class="check-area">
+									<input type="checkbox" id="check3">
+									<label for="check3">НДС обязателен</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="content flex" style="justify-content: space-between;">
+				<aside>
+					<div class="reclam"></div>
+				</aside>
+				<div class="items flex">
+					{% for i in object_list %}
+                        <div class="item">
+                            <div class="card-header">
+                                <button type="button">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </button>
+                                <button type="button">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
+                                </button>
+                            </div>
+                            <div class="title">Предложение</div>
+                            <img src="{{ i.img.url }}" alt="images/dist/no-photo-placeholder.png">
+                            <div class="card-info">
+                                <div class="line">
+                                    <span class="head">Заказчик</span>
+                                    <a class="value">{{ i.user }}</a>
+                                </div>
+                                <div class="line">
+                                    <span class="head">Дата публикации</span>
+                                    <span class="value">{{ i.created_at }}</span>
+                                </div>
+                                <div class="line">
+                                    <span class="head">Сумма</span>
+                                    <span class="value highlight">{{ i.price }} руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+					<div class="item mobile-adv">
+						<a href="/fair.html"><img src="{% static "images/dist/fair/img_def_rekl.png" %}" alt="images/dist/fair/img_def_rekl.png"></a>
+					</div>
+				</div>
+				<aside>
+					<div class="reclam"></div>
+				</aside>
+			</div>
+		</section>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+		$( document ).ready(function() {
+			$(".btn-sort").click(function(){
+				$("#sort-options").toggleClass("hidden");
+			});
+			$(document).mouseup(function(e){
+				if(!$("#sort").is(e.target) && $("#sort").has(e.target).length === 0){
+					$("#sort-options").addClass("hidden");
+				}
+			});
+		});
+	</script>
+{% endblock %}
+

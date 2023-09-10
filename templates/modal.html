@@ -1,0 +1,130 @@
+<div class="popup popup-logIn">
+	<div class="popup-wrap">
+		<div class="popup-content noselect">
+			<button type="button" class="cross popup-close__btn">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+			</button>
+			<h3>Вход в личный кабинет</h3>
+			<form action="" method="post" id="login-form">
+                {% csrf_token %}
+				<input type="email" placeholder="E-mail" id="username" name="username">
+				<input type="password" placeholder="Пароль" id="password" name="password">
+				<div class="checkbox-wrap">
+					<input type="checkbox" id="popup__checkbox1">
+					<label for="popup__checkbox1">Запомнить меня на этом компьютере</label>
+				</div>
+				<input type="submit" value="Войти">
+			</form>
+			<div class="popup-links">
+				<button type="button" class="restore__btn">Забыли пароль?</button>
+				<button type="button" class="reg__btn float-right">Регистрация</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-reg">
+	<div class="popup-wrap">
+		<div class="popup-content noselect">
+			<button type="button" class="cross popup-close__btn">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+			</button>
+			<h3>Регистрация</h3>
+			<form action="" method="post" id="register-form">
+                {% csrf_token %}
+				<div class="tabs">
+					<button class="popup-reg__btn__switchOn active" type="button">Предприятие</button>
+					<button class="popup-reg__btn__switchOff" type="button">Физ. лицо</button>
+				</div>
+				<div class="form-section">
+					<select id="region" name="region">
+						<option value="">Выберите регион</option>
+					</select>
+					<select id="city" name="city">
+						<option value="">Выберите город</option>
+					</select>
+					<div class="popup-reg__form-switchable">
+						<input type="text" placeholder="Наименование предприятия" id="company_name" name="company_name">
+						<input type="text" placeholder="ИНН" id="inn" name="inn">
+					</div>
+				</div>
+				<div class="form-section">
+					<div class="head">Вы регистрируетесь на платформе для:</div>
+					<div class="checkbox-wrap">
+						<input type="checkbox" name="checkbox-reg1" id="checkbox-reg1">
+						<label for="checkbox-reg1">Для размещения заказов</label>
+					</div>
+					<div class="checkbox-wrap">
+						<input type="checkbox" name="checkbox-reg2" id="checkbox-reg2">
+						<label for="checkbox-reg2">Для откликов на заказы</label>
+					</div>
+					<div class="checkbox-wrap">
+						<input type="checkbox" name="checkbox-reg3" id="checkbox-reg3">
+						<label for="checkbox-reg3">Другая цель</label>
+					</div>
+				</div>
+				<div class="form-section">
+					<div class="head">Контактное лицо:</div>
+					<input type="text" placeholder="Имя" id="firstname" name="firstname">
+					<input type="text" placeholder="Фамилия" id="lastname" name="lastname">
+					<input type="tel" placeholder="Телефон" id="number_phone" name="number_phone">
+					<input type="email" placeholder="E-mail" id="email" name="email">
+					<input type="password" placeholder="Пароль" id="password" name="password">
+					<input type="password" placeholder="Подтверждение пароля" id="password2">
+				</div>
+				<div class="checkbox-wrap confident">
+					<input type="checkbox" id="popup__checkbox2">
+					<label for="popup__checkbox2">Я принимаю <a href="">политику конфиденциальности</a></label>
+				</div>
+				<input type="submit" value="Регистрация">
+			</form>
+		</div>
+	</div>
+</div>
+<div class="popup popup-restore">
+	<div class="popup-wrap">
+		<div class="popup-content noselect">
+			<button type="button" class="cross popup-close__btn">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+			</button>
+			<h3>Восстановление пароля</h3>
+			<form action="" method="post">
+				<input type="email" placeholder="E-mail">
+				<input type="submit" value="Восстановить пароль">
+			</form>
+		</div>
+	</div>
+</div>
+<div class="mobile-menu hidden" id="menu">
+	<div class="item plans">
+		<a href="/">Прайс</a>
+	</div>
+	<div class="item links">
+		<ul>
+			<li><a href="orders.html">Предложения</a></li>
+			<li><a href="fair.html">Объявления</a></li>
+			<li class="dropdown">
+				<span>Для принципала</span>
+				<ul>
+					<li><a href="/">Об агентах</a></li>
+					<li><a href="/">Работа с командой</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<span>Для агента</span>
+				<ul>
+					<li><a href="/">Об агентской деятельности</a></li>
+					<li><a href="/">Присоединиться к "Название"</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li><a href="/">Помощь</a></li>
+		</ul>
+	</div>
+	<div class="item login">
+		<ul>
+			<li><button type="button" class="logIn__btn">Вход</button></li>
+			<li><button type="button" class="reg__btn">Регистрация</button></li>
+		</ul>
+	</div>
+</div>

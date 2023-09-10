@@ -1,0 +1,109 @@
+main {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+main h2 {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+}
+main .sidebar {
+  min-width: 240px;
+  width: 240px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 15px;
+}
+main .sidebar ul {
+  list-style: none;
+}
+main .sidebar ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+main .sidebar ul li a {
+  display: inline-block;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px 15px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .sidebar ul li a:hover {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .sidebar ul li a:hover svg path {
+  fill: #fff;
+}
+main .sidebar ul li a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+main .sidebar ul li a svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .sidebar ul li a svg, main .sidebar ul li a span {
+  vertical-align: middle;
+}
+main .sidebar ul li a.active {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .sidebar ul li a.active svg path {
+  fill: #fff;
+}
+main .content .tabs {
+  border-bottom: 1px solid #ccc;
+}
+main .content .tabs button {
+  border: none;
+  background-color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #33324e;
+  font-family: Nunito-Regular, sans-serif;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .tabs button:hover {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .tabs button.selected {
+  background-color: #4353ff;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+  main h2 {
+    font-size: 22px;
+  }
+  main .container.flex {
+    display: block;
+  }
+  main .container.flex .sidebar {
+    width: 100%;
+    min-width: auto;
+    margin-bottom: 15px;
+  }
+}

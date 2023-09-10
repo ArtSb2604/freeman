@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+	<link rel="stylesheet" href="{% static "style/css/lk.css" %}">
+	<link rel="stylesheet" href="{% static "style/css/lk-createOrder.css" %}">
+{% endblock %}
+{% block main %}
+		<div class="container flex">
+			<div class="sidebar" style="padding-top: 70px;">
+				{% include "lk/sidebar.html" with template='create_order' %}
+			</div>
+			<div class="content">
+				<h2>Создать объявление</h2>
+				<form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+					<div class="form-section">
+						<label for="input-title">Заголовок<span class="req">*</span></label>
+						{{ form.title }}
+					</div>
+					<div class="form-section">
+						<label for="select-category">Категория<span class="req">*</span></label>
+						{{ form.categories }}
+					</div>
+					<div class="form-section">
+						<label for="textarea-description">Описание<span class="req">*</span></label>
+						{{ form.description }}
+					</div>
+					<div class="form-section">
+						<label for="input-file">Прикрепить фото</label>
+						{{ form.img }}
+					</div>
+					<div class="price" id="price__inputs">
+						<div class="form-section">
+							<label for="input-price">Цена<span class="req">*</span></label>
+                            {{ form.price }}
+						</div>
+						<div class="form-section">
+							<label for="select-cash">Валюта<span class="req">*</span></label>
+						    {{ form.currency }}
+						</div>
+						<div class="checkbox noselect">
+							<input type="checkbox" name="price_dog" id="price-checkbox">
+							<label for="price-checkbox">Цена договорная</label>
+						</div>
+					</div>
+					<div class="form-section">
+						<label for="input-adress">Адрес<span class="req">*</span></label>
+						{{ form.address }}
+					</div>
+					<div class="form-section">
+						<label for="input-name">Контактное лицо<span class="req">*</span></label>
+						{{ form.contact_person }}
+					</div>
+					<div class="form-section">
+						<label for="input-phone">Телефон<span class="req">*</span></label>
+						{{ form.number_phone }}
+					</div>
+					<button type="submit">Опубликовать</button>
+				</form>
+			</div>
+		</div>
+{% endblock %}
+{% block script %}
+    <script>
+		$(document).ready(function(){
+			$("#price-checkbox").change(function(){
+				if(this.checked){
+					$("#price__inputs").children(".form-section").hide();
+				}else{
+					$("#price__inputs").children(".form-section").show();
+				}
+			});
+		});
+	</script>
+{% endblock %}

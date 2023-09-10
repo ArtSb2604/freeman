@@ -1,0 +1,281 @@
+body.glightbox-open {
+  overflow-y: scroll;
+  position: fixed;
+}
+
+.popup-contacts .popup-content {
+  width: 100%;
+}
+.popup-contacts .head {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+}
+.popup-contacts .line {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.popup-contacts .line .title {
+  font-family: Nunito-SemiBold, sans-serif;
+}
+.popup-contacts .line .value {
+  float: right;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+}
+main h2 {
+  text-align: center;
+  font-size: 25px;
+}
+main aside {
+  padding: 70px 15px 25px 15px;
+}
+main aside .reclam {
+  width: 200px;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+}
+main .content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 35px;
+}
+main .content h2 {
+  width: 100%;
+}
+main .content .card {
+  width: 70%;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .content .card .card-header {
+  margin-bottom: 15px;
+}
+main .content .card .card-header button:last-child {
+  float: right;
+}
+main .content .card .card-header button {
+  padding: 5px;
+  vertical-align: middle;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .card .card-header button:hover {
+  background-color: #7B86FF;
+}
+main .content .card .card-header button:hover svg {
+  stroke: #ffffff;
+}
+main .content .card .card-header button:hover svg path {
+  stroke: #ffffff;
+}
+main .content .card .card-header button svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+main .content .card .card-header button svg, main .content .card .card-header button path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .card a {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+main .content .card a img {
+  display: block;
+  margin: 0 auto 25px auto;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
+main .content .card .card-info {
+  margin-bottom: 25px;
+}
+main .content .card .card-info .line span, main .content .card .card-info .line a {
+  vertical-align: middle;
+}
+main .content .card .card-info .line a {
+  color: #4353ff;
+}
+main .content .card .card-info .line .value {
+  float: right;
+}
+main .content .card .card-info .line .highlight {
+  background-color: #7B86FF;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 5px 7px;
+  margin-top: -5px;
+}
+main .content .card .card-info .line:not(:last-child) {
+  margin-bottom: 10px;
+}
+main .content .card .card-description .head {
+  font-size: 18px;
+  font-family: Nunito-SemiBold, sans-serif;
+}
+main .content .card .card-description .options {
+  margin-top: 25px;
+}
+main .content .card .card-description .options .option .title, main .content .card .card-description .options .option .value {
+  display: inline-block;
+}
+main .content .card .card-description .options .option .title {
+  color: #7f88a6;
+  width: 100px;
+}
+main .content .card .card-description .options .option:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .contact {
+  width: 30%;
+}
+main .content .contact button.b-btn {
+  background-color: #4353ff;
+  color: #ffffff;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+}
+main .content .contact button.b-btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+main .content .contact .contact-buttons {
+  padding: 0 15px;
+}
+main .content .contact .contact-buttons button {
+  margin-bottom: 15px;
+}
+main .content .contact .company-card {
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+main .content .contact .company-card .card-header button {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .contact .company-card .card-header button:hover {
+  background-color: #7B86FF;
+}
+main .content .contact .company-card .card-header button:hover svg {
+  stroke: #ffffff;
+}
+main .content .contact .company-card .card-header button:hover svg path {
+  stroke: #ffffff;
+}
+main .content .contact .company-card .card-header button svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+main .content .contact .company-card .card-header button svg, main .content .contact .company-card .card-header button path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .contact .company-card .card-header .rate {
+  float: right;
+}
+main .content .contact .company-card .card-header .rate svg {
+  padding: 8px 5px 12px 5px;
+  width: 20px;
+  height: auto;
+}
+main .content .contact .company-card .card-header .rate span, main .content .contact .company-card .card-header .rate svg {
+  vertical-align: middle;
+}
+main .content .contact .company-card .card-title {
+  font-family: Nunito-SemiBold, sans-serif;
+  margin: 10px 0;
+}
+main .content .contact .company-card img.logo {
+  margin: 0 auto 15px auto;
+  display: block;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  main aside {
+    padding-top: 65px;
+  }
+  main aside .reclam {
+    width: 150px;
+  }
+  main .content h2 {
+    font-size: 22px;
+  }
+  main .content .contact {
+    width: 40%;
+  }
+  main .content .card {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .content .contact, main .content .card {
+    width: 100%;
+  }
+  main .content .contact {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+  }
+  main aside {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 0;
+  }
+  main aside .reclam {
+    height: 150px;
+    width: 100%;
+  }
+  main aside:not(.mobile) {
+    display: none;
+  }
+  main .content {
+    padding: 0 15px 35px 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main aside a {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 425px) {
+  main aside a {
+    width: 85%;
+  }
+  main aside a:not(:first-child) {
+    display: none;
+  }
+}

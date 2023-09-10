@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<meta name="description" content="Description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="{% static "images/favicon.png" %}">
+	<meta property="og:image" content="images/dist/main-big-logo.png">
+	<link rel="stylesheet" href="{% static "style/css/hamburgers.min.css" %}">
+	<link rel="stylesheet" href="{% static "style/css/main.css" %}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+	<header>
+	<div class="header-box">
+		<a class="hamburger hamburger--vortex" href="/">
+			<span class="hamburger-box">
+			  <span class="hamburger-inner"></span>
+			</span>
+		</a>
+		<div class="logo"><a href="/">Название</a></div>
+		<div class="plans"><a href="/">Прайс</a></div>
+		<div class="login">
+			<ul>
+				{% if user.is_authenticated %}
+                    <li><a class="logIn__btn" href="/profile">Личный кабинет</a></li>
+                {% else %}
+                    <li><span class="logIn__btn">Вход</span></li>
+                    <li><span class="reg__btn">Регистрация</span></li>
+                {% endif %}
+			</ul>
+		</div>
+	</div>
+	<div class="header-menu">
+		<ul>
+			<li><a href="/fairs">Предложения</a></li>
+			<li><a href="/advertisement">Объявления</a></li>
+			<li>
+				<span>Для принципала</span>
+				<ul>
+					<li><a href="/">Об агентах</a></li>
+					<li><a href="/">Работа с командой</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>Для агента</span>
+				<ul>
+					<li><a href="/">Об агентской деятельности</a></li>
+					<li><a href="/">Присоединиться к "Название"</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li><a href="/">Помощь</a></li>
+
+		</ul>
+	</div>
+    </header>
+    {% include "modal.html" %}
+	<main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
+<footer>
+	<div class="content flex">
+		<nav>
+			<ul>
+				<li><a href="/">Об агентской деятельности</a></li>
+				<li><a href="/">Публичная оферта</a></li>
+				<li><a href="/">Политика конфиденциальности</a></li>
+				<li><a href="/">Реквизиты</a></li>
+				<li><a href="/">Прайс</a></li>
+				<li><a href="/">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="contacts">
+			<a href="tel:+79999999999">+7 (999) 999-99-99</a>
+			<a href="mailto:mail@yandex.ru">mail@yandex.ru</a>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A449373fd8b314cc34468f1f049f493cc528b9e18bf7880ea9f16eb30242cd58e&amp;source=constructor" width="600" height="250" frameborder="0"></iframe>
+		</div>
+	</div>
+	<span class="copy">&copy; «Название», 2015-2023</span>
+</footer>
+<script src="{% static "js/jquery.min.js" %}"></script>
+<script src="{% static "js/main.js" %}"></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>

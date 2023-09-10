@@ -1,0 +1,573 @@
+section.gray {
+  background-color: #F6F7FB;
+}
+
+section {
+  padding: 65px 30px;
+}
+
+h1 {
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 85px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 38px;
+  font-family: Nunito-Bold, sans-serif;
+  text-align: center;
+}
+
+h3 {
+  font-family: Nunito-Semibold, sans-serif;
+  font-size: 30px;
+}
+
+a.btn {
+  display: inline-block;
+  background-color: #4353ff;
+  color: #ffffff;
+  padding: 18px 22px;
+  border-radius: 6px;
+  font-size: 22px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+
+.splash {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.splash .title {
+  padding: 0 30px 0 0;
+}
+.splash .title h2 {
+  margin: 0 0 55px 0;
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 32px;
+  text-align: left;
+}
+.splash .title a.btn:not(:last-child) {
+  margin-right: 25px;
+}
+.splash .b-logo {
+  margin: 60px 80px 40px 160px;
+}
+
+.offers {
+  padding-top: 35px;
+}
+.offers .items {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 35px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.offers .items .item {
+  width: 27%;
+  padding: 32px;
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+}
+.offers .items .item:hover .title {
+  color: #4353ff;
+}
+.offers .items .item .title {
+  font-size: 22px;
+  font-family: Nunito-SemiBold, sans-serif;
+  margin-bottom: 10px;
+}
+.offers .items .item .card-info {
+  font-size: 16px;
+}
+.offers .items .item .card-info .line {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.offers .items .item .card-info .line a {
+  color: #4353ff;
+}
+.offers .items .item .card-info .line .highlight {
+  background-color: #7B86FF;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 5px 7px;
+}
+.offers .items .item .card-info .line:not(:last-child) {
+  margin-bottom: 7px;
+}
+.offers .items .item img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.explain .items {
+  padding: 0 150px;
+}
+.explain .items .item {
+  width: 50%;
+  text-align: center;
+}
+.explain .items .item img {
+  margin-bottom: 25px;
+}
+.explain .items .item .title {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 30px;
+}
+.explain .items .item ul {
+  margin-top: 25px;
+  font-size: 20px;
+  padding-left: 22px;
+  display: inline-block;
+}
+.explain .items .item ul li {
+  text-align: left;
+}
+.explain .items .item ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.useful {
+  text-align: center;
+}
+.useful h3 {
+  margin: 0 0 25px 0;
+}
+.useful .items .item {
+  width: 50%;
+  font-size: 20px;
+}
+.useful .items .item img {
+  margin-bottom: 15px;
+}
+.useful .items .item p {
+  margin: 0;
+}
+.useful .items .item a.btn {
+  display: inline-block;
+  margin: 35px 0;
+}
+
+.price {
+  text-align: center;
+}
+.price .items {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+}
+.price .items .item {
+  width: 33%;
+  padding: 50px 25px;
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  cursor: pointer;
+}
+.price .items .item img {
+  width: 40%;
+}
+.price .items .item .title {
+  font-family: Nunito-Bold, sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.price .items .item .sub {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 25px;
+}
+.price .items .item .top {
+  padding: 25px 0;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #cccccc;
+}
+.price .items .item ul {
+  list-style: none;
+  font-size: 20px;
+}
+.price .items .item ul li {
+  position: relative;
+}
+.price .items .item ul li::before {
+  content: url("../images/dist/check-read-svgrepo-com.svg");
+  display: block;
+  width: 40px;
+  position: absolute;
+  top: -10px;
+}
+.price .items .item ul li:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.counters {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+.counters .counter {
+  background-color: #7B86FF;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 20px 32px;
+  width: 33%;
+  line-height: 1.5;
+}
+.counters .counter span {
+  font-size: 28px;
+  font-family: Nunito-Bold;
+}
+.counters .counter .sub {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1860px) {
+  main .splash .b-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .splash .b-logo img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  main a.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  main .splash .title h1 {
+    font-size: 48px;
+  }
+  main .splash .title h2 {
+    font-size: 25px;
+  }
+  main .splash .title a.btn:not(:last-child) {
+    margin-right: 15px;
+  }
+  main .offers .items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .offers .items .item {
+    width: 41%;
+  }
+  main .explain .items {
+    padding: 0;
+  }
+  main .price .items {
+    gap: 15px;
+  }
+  main .counters {
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main section {
+    padding: 30px;
+  }
+  main section h2 {
+    font-size: 32px;
+  }
+  main .splash .title {
+    margin-top: 15px;
+  }
+  main .splash .title h1 {
+    font-size: 35px;
+  }
+  main .splash .title h2 {
+    font-size: 20px;
+  }
+  main .splash .title a.btn {
+    margin-bottom: 15px;
+  }
+  main .offers .items {
+    gap: 20px;
+  }
+  main .offers .items .item {
+    width: 38%;
+  }
+  main .explain .items .item img {
+    width: 65%;
+  }
+  main .explain .items .item .title {
+    font-size: 25px;
+  }
+  main .explain .items .item ul {
+    font-size: 18px;
+    list-style: none;
+    padding: 0;
+  }
+  main .explain .items .item ul li {
+    text-align: center;
+  }
+  main .useful h3 {
+    font-size: 25px;
+  }
+  main .useful .items .item img {
+    width: 75%;
+  }
+  main .useful .items .item p {
+    font-size: 18px;
+  }
+  main .price h3 {
+    font-size: 25px;
+  }
+  main .price .items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .price .items .item {
+    width: 40%;
+  }
+  main .price .items .item .top {
+    padding: 15px 0;
+    margin-bottom: 15px;
+  }
+  main .price .items .item .title {
+    font-size: 22px;
+  }
+  main .price .items .item .sub {
+    font-size: 20px;
+  }
+  main .price .items .item ul {
+    font-size: 18px;
+  }
+  main .price .items .item ul li::before {
+    width: 30px;
+    top: -5px;
+  }
+  main .counters .num {
+    font-size: 25px;
+  }
+  main .counters .counter {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main a.btn {
+    font-size: 18px;
+  }
+  main section {
+    padding: 15px;
+  }
+  main section h2 {
+    font-size: 25px;
+  }
+  main .splash {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  main .splash .b-logo {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin: 0 auto;
+    width: 30%;
+  }
+  main .splash .title {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 0;
+    padding-right: 0;
+  }
+  main .splash .title h1 {
+    font-size: 28px;
+  }
+  main .splash .title h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  main .splash .title a.btn {
+    margin-bottom: 0;
+  }
+  main .offers {
+    padding-top: 15px;
+  }
+  main .offers .items .item {
+    width: 50%;
+  }
+  main .offers .items .item .title {
+    font-size: 18px;
+  }
+  main .explain .items {
+    display: block;
+  }
+  main .explain .items .item {
+    width: auto;
+    margin-top: 25px;
+  }
+  main .explain .items .item img {
+    width: 40%;
+  }
+  main .useful h3 {
+    font-size: 20px;
+  }
+  main .useful .items {
+    display: block;
+  }
+  main .useful .items .item {
+    width: auto;
+  }
+  main .useful .items .item img {
+    width: 60%;
+  }
+  main .price h3 {
+    font-size: 20px;
+  }
+  main .price .items {
+    display: block;
+  }
+  main .price .items .item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  main .price .items .item {
+    width: 50%;
+    margin: 0 auto;
+  }
+  main .counters {
+    gap: 15px;
+  }
+  main .counters .counter {
+    padding: 5px 15px;
+  }
+  main .counters .counter .num {
+    font-size: 20px;
+  }
+  main .counters .counter .sub {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main a.btn {
+    font-size: 16px;
+  }
+  main section h2 {
+    font-size: 22px;
+  }
+  main .splash .b-logo {
+    width: 50%;
+  }
+  main .splash .title h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  main .splash .title h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  main .offers .items .item {
+    width: 70%;
+  }
+  main .explain .items .item {
+    margin-top: 15px;
+  }
+  main .explain .items .item img {
+    width: 50%;
+  }
+  main .explain .items .item .title {
+    font-size: 20px;
+  }
+  main .explain .items .item ul {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  main .useful h3 {
+    font-size: 18px;
+  }
+  main .useful .items .item img {
+    width: 70%;
+  }
+  main .price .items .item {
+    padding: 30px 15px;
+    width: auto;
+  }
+  main .price .items .item img {
+    width: 30%;
+  }
+  main .price .items .item .title {
+    font-size: 20px;
+  }
+  main .price .items .item .sub {
+    font-size: 18px;
+  }
+  main .price .items .item ul {
+    font-size: 18px;
+  }
+  main .price .items .item ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  main .counters {
+    gap: 5px;
+  }
+  main .counters .counter .num {
+    font-size: 18px;
+  }
+  main .counters .counter .sub {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 425px) {
+  main .splash .title a.btn:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  main .splash .title a.btn {
+    display: block;
+  }
+  main .offers .items .item {
+    width: 100%;
+  }
+  main .explain .items .item img {
+    width: 70%;
+  }
+  main .useful .items .item a.btn {
+    margin: 15px 0;
+  }
+  main .counters {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .counters .counter {
+    width: 40%;
+  }
+}

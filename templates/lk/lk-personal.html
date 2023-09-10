@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+	<link rel="stylesheet" href="{% static "style/css/lk.css" %}">
+	<link rel="stylesheet" href="{% static "style/css/lk-personal.css" %}">
+{% endblock %}
+{% block main %}
+		<h2>Личный кабинет</h2>
+		<div class="container flex">
+			<div class="sidebar">
+				{% include "lk/sidebar.html" with template='personal' %}
+			</div>
+			<div class="content">
+				<div class="content-left">
+					<div class="card personal-info">
+						<div class="head">
+							<span>Личная информация</span>
+							<button type="button" class="personal__toggleView" id="personal__btn-edit">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							</button>
+							<button type="button" class="hidden personal__toggleView" id="personal__btn-close">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 8L8 16M8.00001 8L16 16" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							</button>
+						</div>
+						<div class="data" id="personal__data">
+							<div class="line">
+								<span class="title">Ф.И.О.</span>
+								<span class="value">{{ user.last_name }} {{ user.first_name }} {{ user.surname }}</span>
+							</div>
+							<div class="line">
+								<span class="title">E-mail</span>
+								<span class="value">{{ user.email }}</span>
+							</div>
+							<div class="line">
+								<span class="title">Телефон</span>
+								<span class="value">{{ user.number_phone }}</span>
+							</div>
+						</div>
+						<form action="" method="post" class="data data-edit" id="personal__data-edit">
+							<div class="line">
+								<span class="title">Фамилия</span>
+								<input type="text" placeholder="Фамилия" value="{{ user.last_name }}">
+							</div>
+							<div class="line">
+								<span class="title">Имя</span>
+								<input type="text" placeholder="Имя" value="{{ user.first_name }}">
+							</div>
+							<div class="line">
+								<span class="title">Отчество</span>
+								<input type="text" placeholder="Отчество" value="{{ user.surname }}">
+							</div>
+							<div class="line">
+								<span class="title">E-mail</span>
+								<input type="email" placeholder="E-mail" value="{{ user.email }}">
+							</div>
+							<div class="line">
+								<span class="title">Телефон</span>
+								<input type="tel" placeholder="Телефон" value="{{ user.number_phone }}">
+							</div>
+							<div class="buttons">
+								<button type="reset" id="personal__btn-reset">Отмена</button>
+								<button type="submit" class="b-btn">Сохранить изменения</button>
+							</div>
+						</form>
+					</div>
+					<div class="card settings">
+						<div class="head">
+							<span>Настройки</span>
+						</div>
+						<form action="" method="post">
+							<div class="form-section input-wrap">
+								<div class="title">Смена пароля</div>
+								<input type="password" placeholder="Новый пароль">
+								<input type="password" placeholder="Подтвердить пароль">
+							</div>
+							<div class="form-section checkbox-wrap noselect">
+								<div class="title">Оповещения на почтовый ящик</div>
+								<div class="line">
+									<input type="checkbox" id="settings-checkbox1" {% if user.newsletter %}checked{% endif %}>
+									<label for="settings-checkbox1">Новостная рассылка</label>
+								</div>
+								<div class="line">
+									<input type="checkbox" id="settings-checkbox2" {% if user.new_order_alerts %}checked{% endif %}>
+									<label for="settings-checkbox2">Оповещения о новых заказах</label>
+								</div>
+							</div>
+							<div class="buttons">
+								<button type="reset">Отмена</button>
+								<button type="submit" class="b-btn">Сохранить изменения</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="content-right">
+					<div class="progress">
+						<div class="head">Заполнено информации</div>
+						<div class="value">80%</div>
+						<div class="progress-bar">
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square active"></div>
+							<div class="square"></div>
+							<div class="square"></div>
+						</div>
+						<div class="sub">Заполните недостающую информацию</div>
+					</div>
+					<div class="card company-info">
+						<div class="head">
+							<span>Информация в карточке</span>
+							<button type="button" class="company__toggleView" id="company__btn-edit">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							</button>
+							<button type="button" class="hidden company__toggleView" id="company__btn-close">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 8L8 16M8.00001 8L16 16" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							</button>
+						</div>
+						<div class="company-head">
+							<div class="logo" style="background-image: url('{{ company.image.url }}')"></div>
+							<span class="name">{{ company.company_name }}</span>
+						</div>
+						<div class="data" id="company__data">
+							<div class="title">Описание</div>
+							<p>{{ company.description }}</p>
+							<div class="title">Юридический адрес</div>
+							<p>{{ company.legal_address }}</p>
+							<div class="line">
+								<span class="title">Телефон</span>
+								<span class="value">{{ company.number_phone }}</span>
+							</div>
+							<div class="line">
+								<span class="title">E-mail</span>
+								<span class="value">{{ company.email }}</span>
+							</div>
+						</div>
+						<form action="" method="post" class="data data-edit" id="company__data-edit">
+							<div class="form-section">
+								<label for="company-image">Изменить фото предприятия</label>
+								<input type="file" id="company-image">
+							</div>
+							<div class="form-section">
+								<div class="title">Описание</div>
+								<textarea name="" id="" cols="30" rows="10" value="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quod blanditiis rerum, et eos consequatur!"></textarea>
+							</div>
+							<div class="form-section">
+								<div class="title">Юридический адрес</div>
+								<input type="text" value="Край Краснодарский, Город Сочи">
+							</div>
+							<div class="form-section">
+								<div class="title">Телефон</div>
+								<input type="tel" value="89221230553">
+							</div>
+							<div class="form-section">
+								<div class="title">E-mail</div>
+								<input type="email" value="vinilave@bk.ru">
+							</div>
+							<div class="buttons">
+								<button type="reset" id="company__btn-reset">Отмена</button>
+								<button type="submit" class="b-btn">Сохранить изменения</button>
+							</div>
+						</form>
+						
+					</div>
+					<div class="card category noselect">
+						<div class="head">
+							<span>Категории производства</span>
+							<button type="button" class="category__toggleView" id="category__btn-edit">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							</button>
+							<button type="button" class="hidden category__toggleView" id="category__btn-close">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 8L8 16M8.00001 8L16 16" stroke="#4353ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							</button>
+						</div>
+						<form id="category__form" action="lk-personal.html" method="post">
+							{% for i in production_categories %}
+                                <div class="form-section">
+                                    <input disabled {% if i in company_categories %}checked{% endif %} type="checkbox" name="" id="category-checkbox1">
+                                    <label for="category-checkbox1">{{ i.title }}</label>
+                                </div>
+                            {% endfor %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+{% block script %}
+    <script>
+		$(document).ready(function(){
+			$(".personal__toggleView").click(function(){
+				$(".personal__toggleView").not(this).removeClass("hidden");
+				$(this).addClass("hidden");
+			});
+			$("#personal__btn-edit").click(function(){
+				$("#personal__data-edit").slideDown(250);
+				$("#personal__data").slideUp(250);
+			});
+			$("#personal__btn-close").click(function(){
+				$("#personal__data").slideDown(250);
+				$("#personal__data-edit").slideUp(250);
+			});
+			$("#personal__btn-reset").click(function(){
+				$("#personal__btn-edit").removeClass("hidden");
+				$("#personal__btn-close").addClass("hidden");
+				$("#personal__data").slideDown(250);
+				$("#personal__data-edit").slideUp(250);
+			});
+
+			$(".company__toggleView").click(function(){
+				$(".company__toggleView").not(this).removeClass("hidden");
+				$(this).addClass("hidden");
+			});
+			$("#company__btn-edit").click(function(){
+				$("#company__data-edit").show();
+				$("#company__data").hide();
+			});
+			$("#company__btn-close").click(function(){
+				$("#company__data").show();
+				$("#company__data-edit").hide();
+			});
+			$("#company__btn-reset").click(function(){
+				$("#company__btn-edit").removeClass("hidden");
+				$("#company__btn-close").addClass("hidden");
+				$("#company__data").show();
+				$("#company__data-edit").hide();
+			});
+
+			$(".category__toggleView").click(function(){
+				$(".category__toggleView").not(this).removeClass("hidden");
+				$(this).addClass("hidden");
+			});
+			$("#category__btn-edit").click(function(){
+				$("#category__form").find("input").prop("disabled", false);
+				$("#category__buttons").show()
+			});
+			$("#category__btn-close").click(function(){
+				$("#category__form").trigger("reset");
+				$("#category__form").find("input").prop("disabled", true);
+				$("#category__buttons").hide()
+			});
+			$("#category__btn-reset").click(function(){
+				$("#category__btn-edit").removeClass("hidden");
+				$("#category__btn-close").addClass("hidden");
+				$("#category__form").find("input").prop("disabled", true);
+			});
+		});
+	</script>
+{% endblock %}
+

@@ -1,0 +1,455 @@
+main {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 65px;
+  font-size: 16px;
+}
+main h2 {
+  font-size: 25px;
+  text-align: center;
+}
+main section .content {
+  padding-top: 25px;
+}
+main section .content aside .reclam {
+  width: 200px;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+}
+main section .content .items {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+main section .content .items .item {
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  background-color: #fff;
+  padding: 15px 25px;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+main section .content .items .item .card-header button {
+  cursor: pointer;
+  padding: 4px 5px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main section .content .items .item .card-header button:hover {
+  background-color: #7B86FF;
+}
+main section .content .items .item .card-header button:hover svg {
+  stroke: #ffffff;
+}
+main section .content .items .item .card-header button:hover svg path {
+  stroke: #ffffff;
+}
+main section .content .items .item .card-header svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+main section .content .items .item .card-header svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main section .content .items .item img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+main section .content .items .item .title {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  margin: 15px 0;
+}
+main section .content .items .item .line a {
+  color: #4353ff;
+}
+main section .content .items .item .line .value {
+  float: right;
+}
+main section .content .items .item .line .highlight {
+  background-color: #7B86FF;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 5px 7px;
+  margin-top: -5px;
+}
+main section .content .items .item .line:not(:last-child) {
+  margin-bottom: 10px;
+}
+main section .content .items .item.mobile-adv {
+  display: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+main section .content .items .item.mobile-adv img {
+  margin-bottom: 0;
+}
+main section .content .items .item.mobile-adv a {
+  display: block;
+}
+main section form .row:not(:last-child) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cccccc;
+}
+main section form button, main section form a {
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main section form button svg, main section form button span, main section form a svg, main section form a span {
+  vertical-align: middle;
+}
+main section form button[type=reset] {
+  margin-right: auto;
+}
+main section form button[type=button], main section form a {
+  margin-right: 10px;
+}
+main section form .b-btn {
+  text-align: center;
+  background-color: #4353ff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main section form .b-btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+main section form a.b-btn {
+  padding: 14px 15px;
+  line-height: 15px;
+}
+main section form .ad-search {
+  padding: 15px;
+}
+main section form .ad-search .selects select {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  width: 25%;
+}
+main section form .ad-search .selects select option:focus {
+  background-color: red;
+}
+main section form .ad-search .selects select option {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main section form .ad-search .selects select:not(:last-child) {
+  margin-right: 25px;
+}
+main section form .ad-search .inputs {
+  margin-top: 20px;
+}
+main section form .ad-search .inputs .title {
+  margin-bottom: 15px;
+  font-family: Nunito-SemiBold, sans-serif;
+}
+main section form .ad-search .inputs input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+main section form .ad-search .inputs label, main section form .ad-search .inputs input[type=checkbox] {
+  cursor: pointer;
+}
+main section form .ad-search .inputs .check-area:not(:last-child) {
+  margin-bottom: 10px;
+}
+main section form .ad-search .inputs .check-area * {
+  vertical-align: middle;
+}
+main section form .ad-search .inputs .checkbox-area {
+  padding-left: 20px;
+  width: 40%;
+}
+main section form .ad-search .inputs .input-area span {
+  padding: 0 15px;
+}
+main section form .ad-search .inputs input[type=number] {
+  width: 30%;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+}
+main section form .ad-search .inputs input[type=number]::-webkit-outer-spin-button, main section form .ad-search .inputs input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+main section form .ad-search .inputs input[type=number], main section form .ad-search .inputs input[type=number]:hover, main section form .ad-search .inputs input[type=number]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+main section form .btn-sort {
+  background-color: #fff;
+  color: #7B86FF;
+  padding: 6px 15px;
+}
+main section form .btn-sort svg {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 1px;
+}
+main section form .btn-sort {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+main section form .sort {
+  position: relative;
+}
+main section form .sort-options.hidden {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: none;
+}
+main section form .sort-options {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  width: 250px;
+  text-align: left;
+  font-size: 16px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+}
+main section form .sort-options ul {
+  background-color: #fff;
+  list-style: none;
+}
+main section form .sort-options li {
+  padding: 10px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main section form .sort-options li:hover {
+  background-color: #F6F7FB;
+}
+main section form .sort-options button {
+  background-color: transparent;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+main section form .sort-options button svg {
+  width: 30px;
+  height: 30px;
+}
+main section form .sort-options button svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main section form .sort-options button:hover {
+  background-color: #7B86FF;
+}
+main section form .sort-options button:hover svg path {
+  stroke: #ffffff;
+}
+main section form .sort-options button.active {
+  background-color: #7B86FF;
+}
+main section form .sort-options button.active svg path {
+  stroke: #ffffff;
+}
+main section form .search {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30%;
+}
+main section form .search input[type=search] {
+  width: 100%;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+main section form .search .icon {
+  background-color: #4353ff;
+  padding: 4px 10px 6px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main section form .search .icon svg {
+  width: 30px;
+  height: 30px;
+}
+main section form .search .icon:hover {
+  background-color: #7B86FF;
+}
+
+@media screen and (max-width: 1440px) {
+  main h2 {
+    font-size: 22px;
+  }
+  main section form .search {
+    width: 34%;
+  }
+  main section form .search .icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  main section form .sort-options {
+    width: 240px;
+  }
+  main section form .sort-options button svg {
+    width: 25px;
+    height: 25px;
+  }
+  main section form .ad-search {
+    font-size: 16px;
+    padding: 15px 0;
+  }
+  main section form .ad-search .inputs .input-area span {
+    padding: 0;
+  }
+  main section form .ad-search .inputs .checkbox-area {
+    width: 54%;
+    padding: 0;
+  }
+  main section form .ad-search .selects select {
+    padding: 5px 10px;
+  }
+  main section .content .items .item {
+    padding: 15px;
+    max-width: 48%;
+  }
+  main section .content .items .item .card-header svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main section form .row:not(:last-child) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main section form .btn-sort {
+    padding: 5px;
+  }
+  main section form button[type=reset], main section form button[type=button], main section form a {
+    margin-right: 0;
+  }
+  main section form .search {
+    width: 100%;
+    margin-top: 15px;
+  }
+  main section form .ad-search .selects {
+    display: block;
+  }
+  main section form .ad-search .selects select {
+    width: 100%;
+  }
+  main section form .ad-search .selects select:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  main section form .ad-search .inputs {
+    display: block;
+  }
+  main section form .ad-search .inputs .input-area:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  main section form .ad-search .inputs .checkbox-area {
+    width: 100%;
+  }
+  main section .content aside .reclam {
+    width: 150px;
+  }
+  main section .content .items {
+    padding: 0 15px;
+  }
+  main section .content .items .item {
+    max-width: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 35px;
+  }
+  main section form .sort-options {
+    left: 5px;
+  }
+  main section .content aside {
+    display: none;
+  }
+  main section .content .items {
+    padding: 0;
+    -webkit-column-gap: 2%;
+       -moz-column-gap: 2%;
+            column-gap: 2%;
+  }
+  main section .content .items .item {
+    max-width: 48%;
+  }
+  main section .content .items .item.mobile-adv {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  main h2 {
+    font-size: 20px;
+  }
+  main section form .b-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+  main section .content {
+    padding-top: 15px;
+  }
+  main section .content .items .item {
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+	<link rel="stylesheet" href="{% static "style/css/lk.css" %}">
+	<link rel="stylesheet" href="{% static "style/css/lk-orders.css" %}">
+{% endblock %}
+{% block main %}
+		<h2>Личный кабинет</h2>
+		<div class="container flex">
+			<div class="sidebar">
+				{% include "lk/sidebar.html" with template='fairs' %}
+			</div>
+			<div class="content">
+				<div class="tabs noselect">
+					<button type="button" class="selected orders__toggleView" id="items-active__btn">Активные</button>
+					<button type="button" class="orders__toggleView" id="items-completed__btn">Завершённые</button>
+				</div>
+				<div class="items selected orders-active">
+					<div class="item">
+						<div class="card-header">
+							<button type="button">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+							</button>
+							<button type="button">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
+							</button>
+						</div>
+						<div class="title">Предложение</div>
+						<img src="images/dist/no-photo-placeholder.png" alt="images/dist/no-photo-placeholder.png">
+						<div class="card-info">
+							<div class="line">
+								<span class="head">Заказчик</span>
+								<a href="/fair.html" class="value">Имя</a>
+							</div>
+							<div class="line">
+								<span class="head">Дата публикации</span>
+								<span class="value">10.08.2023</span>
+							</div>
+							<div class="line">
+								<span class="head">Количество</span>
+								<span class="value">1 шт.</span>
+							</div>
+							<div class="line">
+								<span class="head">Сумма</span>
+								<span class="value highlight">1000 руб.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="items orders-completed">
+					<div class="item">
+						<div class="card-header">
+							<button type="button">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+							</button>
+							<button type="button">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
+							</button>
+						</div>
+						<div class="title">Завершённое предложение</div>
+						<img src="images/dist/no-photo-placeholder.png" alt="images/dist/no-photo-placeholder.png">
+						<div class="card-info">
+							<div class="line">
+								<span class="head">Заказчик</span>
+								<a href="/fair.html" class="value">Имя</a>
+							</div>
+							<div class="line">
+								<span class="head">Дата публикации</span>
+								<span class="value">10.08.2023</span>
+							</div>
+							<div class="line">
+								<span class="head">Количество</span>
+								<span class="value">1 шт.</span>
+							</div>
+							<div class="line">
+								<span class="head">Сумма</span>
+								<span class="value highlight">1000 руб.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+{% block script %}
+    <script>
+		$(document).ready(function(){
+			$(".orders__toggleView").click(function(){
+				$(this).addClass("selected");
+				$(".orders__toggleView").not(this).removeClass("selected");
+			});
+			$("#items-active__btn").click(function(){
+				$(".orders-active").addClass("selected");
+				$(".orders-completed").removeClass("selected");
+			});
+			$("#items-completed__btn").click(function(){
+				$(".orders-completed").addClass("selected");
+				$(".orders-active").removeClass("selected");
+			});
+
+		});
+	</script>
+{% endblock %}
+

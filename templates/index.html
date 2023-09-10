@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+	<link rel="stylesheet" href="{% static "style/css/index.css" %}">
+{% endblock %}
+{% block main %}
+<section class="flex splash">
+			<div class="title">
+				<h1>"Название" онлайн</h1>
+				<h2>Платформа для автоматизированного поиска швейных производств и актуальных заказов</h2>
+				<a href="/" class="btn">Найти агента</a>
+				<a href="/" class="btn">Найти предложение</a>
+			</div>
+			<div class="b-logo">
+				<img src="{% static "images/dist/main-big-logo.png" %}" alt="images/dist/main-big-logo.png">
+			</div>
+		</section>
+		<section class="offers gray">
+			<h2>Новые предложения на "Название"</h2>
+			<div class="items flex">
+				<div class="item">
+					<div class="title">Предложение</div>
+					<img src="{% static "images/dist/no-photo-placeholder.png" %}" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line flex">
+							<div class="line-title">Заказчик</div>
+							<a href="/" class="line-value">Имя</a>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Дата публикации</div>
+							<div class="line-value">10.08.2023</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Количество</div>
+							<div class="line-value">1 шт.</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Сумма</div>
+							<div class="line-value highlight">1000 руб.</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="title">Предложение</div>
+					<img src="{% static "images/dist/no-photo-placeholder.png" %}" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line flex">
+							<div class="line-title">Заказчик</div>
+							<a href="/" class="line-value">Имя</a>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Дата публикации</div>
+							<div class="line-value">10.08.2023</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Количество</div>
+							<div class="line-value">1 шт.</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Сумма</div>
+							<div class="line-value highlight">1000 руб.</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="title">Предложение</div>
+					<img src="{% static "images/dist/no-photo-placeholder.png" %}" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line flex">
+							<div class="line-title">Заказчик</div>
+							<a href="/" class="line-value">Имя</a>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Дата публикации</div>
+							<div class="line-value">10.08.2023</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Количество</div>
+							<div class="line-value">1 шт.</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Сумма</div>
+							<div class="line-value highlight">1000 руб.</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="title">Предложение</div>
+					<img src="{% static "images/dist/no-photo-placeholder.png" %}" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line flex">
+							<div class="line-title">Заказчик</div>
+							<a href="/" class="line-value">Имя</a>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Дата публикации</div>
+							<div class="line-value">10.08.2023</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Количество</div>
+							<div class="line-value">1 шт.</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Сумма</div>
+							<div class="line-value highlight">1000 руб.</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="item">
+					<div class="title">Предложение</div>
+					<img src="images/dist/no-photo-placeholder.png" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line flex">
+							<div class="line-title">Заказчик</div>
+							<a href="/" class="line-value">Имя</a>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Дата публикации</div>
+							<div class="line-value">10.08.2023</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Количество</div>
+							<div class="line-value">1 шт.</div>
+						</div>
+						<div class="line flex">
+							<div class="line-title">Сумма</div>
+							<div class="line-value highlight">1000 руб.</div>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</section>
+		<section class="explain">
+			<h2>Для кого?</h2>
+			<div class="items flex">
+				<div class="item">
+					<img src="{% static "images/dist/145419.png" %}" alt="images/dist/145419.png">
+					<div class="title">Для принципала</div>
+					<ul>
+						<li><span>Описание деятельности для принципала</span></li>
+						<li><span>Описание деятельности для принципала</span></li>
+						<li><span>Описание деятельности для принципала</span></li>
+						<li><span>Описание деятельности для принципала</span></li>
+					</ul>
+				</div>
+				<div class="item">
+					<img src="{% static "images/dist/145419.png" %}" alt="images/dist/145419.png">
+					<div class="title">Для агента</div>
+					<ul>
+						<li>Описание деятельности для агента</li>
+						<li>Описание деятельности для агента</li>
+						<li>Описание деятельности для агента</li>
+						<li>Описание деятельности для агента</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="useful gray">
+			<h2>Платформа будет полезна</h2>
+			<h3>Международная платформа для коммуникации производств в сфере лёгкой промышленности</h3>
+			<div class="items flex">
+				<div class="item">
+					<img src="{% static "images/dist/145419.png" %}" alt="images/dist/145419.png">
+					<p>Плюсы деятельности для принципала</p>
+					<a href="/" class="btn">Найти агента</a>
+				</div>
+				<div class="item">
+					<img src="{% static "images/dist/145419.png" %}" alt="images/dist/145419.png">
+					<p>Плюсы деятельности для агента</p>
+					<a href="/" class="btn">Найти предложение</a>
+				</div>
+			</div>
+		</section>
+		<section class="price">
+			<h2>Прайс</h2>
+			<h3>Бесплатное размещение одного предложения в месяц, кроме городов с населением 1+ млн. человек</h3>
+			<div class="items flex">
+				<div class="item">
+					<img src="{% static "images/dist/price-tag-svgrepo-com.png" %}" alt="images/dist/price-tag-svgrepo-com.png">
+					<div class="top">
+						<div class="title">Вариант</div>
+						<div class="sub">Стоимость, руб.</div>
+					</div>
+					<ul>
+						<li>Описание услуги</li>
+						<li>Описание услуги</li>
+						<li>Описание услуги</li>
+					</ul>
+				</div>
+				<div class="item">
+					<img src="{% static "images/dist/price-tag-svgrepo-com.png" %}" alt="images/dist/price-tag-svgrepo-com.png">
+					<div class="top">
+						<div class="title">Вариант</div>
+						<div class="sub">Стоимость, руб.</div>
+					</div>
+					<ul>
+						<li>Описание услуги</li>
+						<li>Описание услуги</li>
+						<li>Описание услуги</li>
+					</ul>
+				</div>
+				<div class="item">
+					<img src="{% static "images/dist/price-tag-svgrepo-com.png" %}" alt="images/dist/price-tag-svgrepo-com.png">
+					<div class="top">
+						<div class="title">Вариант</div>
+						<div class="sub">Стоимость, руб.</div>
+					</div>
+					<ul>
+						<li>Описание услуги</li>
+						<li>Описание услуги</li>
+						<li>Описание услуги</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="counters flex">
+			<div class="counter">
+				<span class="num">999</span>
+				<div class="sub">Принципалов</div>
+			</div>
+			<div class="counter">
+				<span class="num">999</span>
+				<div class="sub">Агентов</div>
+			</div>
+			<div class="counter">
+				<span class="num">999 дней</span>
+				<div class="sub">На рынке</div>
+			</div>
+		</section>
+{% endblock %}
+{% block script %}
+    <script>
+    $(document).ready(function() {
+  $('#login-form').on('submit', function(event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: '/accounts/ajax/login/',
+      type: 'POST',
+      data: $(this).serialize(),
+      dataType: 'json',
+      success: function(response) {
+        if (response.status === 'success') {
+          location.reload();
+        }
+        else {
+          alert('Invalid username or password');
+        }
+      },
+      error: function(xhr, status, error) {
+        console.log(error);
+      }
+    });
+  });
+});
+
+    $(document).ready(function() {
+  $('#register-form').on('submit', function(event) {
+    event.preventDefault();
+      var formData = $(this).serializeArray();
+      formData.push({'reg1':document.getElementById('checkbox-reg1').checked, 'reg2':document.getElementById('checkbox-reg2').checked, 'reg3':document.getElementById('checkbox-reg3').checked});
+      var serializedData = $.param(formData);
+      console.log(serializedData)
+    $.ajax({
+      url: '/accounts/ajax/register/',
+      type: 'POST',
+      data: serializedData,
+      dataType: 'json',
+      success: function(response) {
+        if (response.status === 'success') {
+          location.reload();
+        }
+        else {
+          alert('Invalid username or password');
+        }
+      },
+      error: function(xhr, status, error) {
+        console.log(error);
+      }
+    });
+  });
+});
+    </script>
+{% endblock %}
